@@ -57,8 +57,13 @@ body{
 header{
   margin: 3rem auto;
   font-size: 0.75rem;
-  width: 300px;
+  max-width: 300px;
   text-align: center;
+  transition: max-width 0.5s ease;
+
+  @include mediaMin(1200px){
+    max-width: 500px;
+  }
 
   h1{  
     color: $blue-dark;
@@ -76,16 +81,23 @@ header{
 }
 
 section{
+  max-width: $mobile;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  margin: 0 auto;
+
+  @include mediaMin(900px){
+    flex-direction: row;
+    justify-content: center;
+    max-width: $desktop;
+    flex-wrap: wrap;
+  }
 }
 
 .box{
   margin-top: 1.5rem;
-  width: 300px;
   font-size: 0.9rem;
   box-shadow: 0 0 15px $blue-dark;
   border-radius: 5px;
@@ -95,6 +107,13 @@ section{
   align-items: flex-start;
   justify-content: space-between;
   border-top: 4px solid;
+  width: 100%;
+  transition: transform 0.5s ease, margin 0.5s ease;
+
+  @include mediaMin(900px){
+    margin: 1rem;
+    width: 350px;
+  }
 
   h2{
     font-weight: $fw-bold;
@@ -111,9 +130,9 @@ section{
     align-self: flex-end;
   }
 
-  &:nth-child(1){border-color: $cyan;}
+  &:nth-child(1){border-color: $cyan; @include mediaMin(1200px){transform: translateY(50%);}}
   &:nth-child(2){border-color: $red;}
-  &:nth-child(3){border-color: $orange;}
+  &:nth-child(3){border-color: $orange; @include mediaMin(1200px){transform: translateY(50%);}}
   &:nth-child(4){border-color: $blue;}
 }
 
