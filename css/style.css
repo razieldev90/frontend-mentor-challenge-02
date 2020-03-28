@@ -18,14 +18,16 @@ body {
   color: #a3a5ae;
   background: #fff;
   padding: 2rem;
-  text-align: center;
   background: #fafafa;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
 header {
-  margin: 3rem 0;
+  margin: 3rem auto;
   font-size: 0.75rem;
+  width: 300px;
+  text-align: center;
 }
 header h1 {
   color: #4c4e61;
@@ -38,6 +40,56 @@ header h2 {
   margin-top: 1rem;
   font-weight: 400;
   font-size: 0.9rem;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box {
+  margin-top: 1.5rem;
+  width: 300px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 15px #4c4e61;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top: 4px solid;
+}
+.box h2 {
+  font-weight: 600;
+  color: #4c4e61;
+}
+.box p {
+  color: #a3a5ae;
+  font-size: 0.75rem;
+  margin: 1rem 0;
+}
+.box .icon {
+  align-self: flex-end;
+}
+.box:nth-child(1) {
+  border-color: #45d3d3;
+}
+.box:nth-child(2) {
+  border-color: #ea5353;
+}
+.box:nth-child(3) {
+  border-color: #fcaf4a;
+}
+.box:nth-child(4) {
+  border-color: #549ef2;
+}
+
+footer {
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

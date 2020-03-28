@@ -49,14 +49,16 @@ body{
   color: $blue-graish;
   background: #fff;
   padding: 2rem;
-  text-align: center;
   background: $gray-light;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
 header{
-  margin: 3rem 0;
+  margin: 3rem auto;
   font-size: 0.75rem;
+  width: 300px;
+  text-align: center;
 
   h1{  
     color: $blue-dark;
@@ -73,3 +75,48 @@ header{
   }
 }
 
+section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box{
+  margin-top: 1.5rem;
+  width: 300px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 15px $blue-dark;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top: 4px solid;
+
+  h2{
+    font-weight: $fw-bold;
+    color: $blue-dark;
+  }
+
+  p{
+    color: $blue-graish;
+    font-size: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  .icon{
+    align-self: flex-end;
+  }
+
+  &:nth-child(1){border-color: $cyan;}
+  &:nth-child(2){border-color: $red;}
+  &:nth-child(3){border-color: $orange;}
+  &:nth-child(4){border-color: $blue;}
+}
+
+footer{
+  margin-top: 2rem;
+}
